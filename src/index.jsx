@@ -35,7 +35,7 @@ setTimeout(() => {
   let contador = 0;
   const interval = setInterval(() => {
     const root = document.querySelector(
-      'div[data-tag="[I-CURSOS]"],#root,#app'
+      'div[data-tag="[I-CURSOS]"] div[element="PanelComponent"]'
     );
     if (root) {
       clearInterval(interval);

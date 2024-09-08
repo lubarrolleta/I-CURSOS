@@ -39,6 +39,10 @@ function App(props) {
   });
   createEffect(() => {
     // console.log(productos());
+    const root = document.querySelector(
+      'div[data-tag="[I-CURSOS]"],#root,#app'
+    );
+    console.log(root)
   });
   return (
     <Context.Provider value={memo}>
