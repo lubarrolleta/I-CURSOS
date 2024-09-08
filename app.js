@@ -8,10 +8,10 @@
      body, html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #141414;
-    color: #fff;
+    background: #141414 !important;
+    color: #fff !important;
     cursor: default;
-    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif !important;
     font-size: 10px;
     line-height: 1.2;
     -webkit-user-select: none;
