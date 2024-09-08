@@ -40,6 +40,7 @@ setTimeout(() => {
     );
     if (root) {
       clearInterval(interval);
+      root && root.querySelector('div[id="editor-content"]').setAttribute("style","display: none !important;")
       render(() => <Router 
       // root={App}
       >
