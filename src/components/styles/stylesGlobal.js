@@ -26,7 +26,7 @@ export const GlobalStyles = (props) => {
      /* div[data-tag="[I-CURSOS]"]  */
      div#app{
     overflow: visible;
-    position: static;
+    /* position: static; */
     min-height: 100vh;
     width: 100vw;
 }

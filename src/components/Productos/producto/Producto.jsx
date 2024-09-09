@@ -1,5 +1,5 @@
 import { OverlayTrigger, Popover } from "solid-bootstrap";
-import { createEffect, createSignal } from "solid-js";
+import { Show, createEffect, createSignal } from "solid-js";
 import { setDataUrl } from "../../../constantes/constantes";
 
 export default function Producto(props) {
@@ -22,7 +22,7 @@ export default function Producto(props) {
       };
     },
   };
-  const [poppver, setPopover] = createSignal(null);
+  const [verVideo, setVerVideo] = createSignal(false);
   const [pop, setPop] = createSignal(null);
   createEffect(() => {
     // console.log({p:pop()})
@@ -49,11 +49,12 @@ export default function Producto(props) {
               const popover = document.querySelector(`div[id="modal-${i()}"]`);
               if (popover) {
                 clearInterval(interval);
-                console.log(popover);
+                // console.log(popover);
                 setTimeout(() => {
                   // popover.style.transform = `${popover.style.transform} scale(1.5);`
                   popover.style.display = 'block';
                   card().style.zIndex = '1';
+                  setVerVideo(true);
                 }, 200);
                 //   setTimeout(() => {
                 //     pop().setAttribute(
@@ -154,11 +155,13 @@ export default function Producto(props) {
               const popover = document.querySelector(`div[id="modal-${i()}"]`);
               if (popover) {
                 clearInterval(interval);
-                console.log(popover);
+                // console.log(popover);
                 setTimeout(() => {
                   // popover.style.transform = `${popover.style.transform} scale(1.5);`
-                //   popover.style.display = 'none';
-                //   card().style.zIndex = '0';
+                  popover.style.display = 'none';
+                  card().style.zIndex = '0';
+                setVerVideo(false);
+
                 }, 200);
                 //   setTimeout(() => {
                 //     pop().setAttribute(
@@ -187,7 +190,7 @@ export default function Producto(props) {
             display:none;
             border-radius: .2vw;
             position: absolute;
-            background: red;
+            background: #141414 !important;
             width: 100%;
             height: 100%;
             top: 0px;
@@ -197,6 +200,7 @@ export default function Producto(props) {
             /* transform-origin: 0px; */
             top: 0px;
       `}>
+        <Show when={verVideo()}>
         <iframe style={{
             ["aspect-ratio"]: "16/9",
             width:"100%",
@@ -206,6 +210,8 @@ export default function Producto(props) {
         allowfullscreen="true"
         src={component[productos().type](producto).video}
         ></iframe>
+
+        </Show>
       </div>
     </div>
   );
