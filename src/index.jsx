@@ -6,14 +6,10 @@ import App from "./App";
 import Layout from "./components/Layout/Layout";
 import Productos from "./components/Productos/Productos";
 
-// const root = document.getElementById('root');
+const root = document.getElementById('app');
 // data-tag="[I-CURSOS]"
 
-if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
-  throw new Error(
-    "Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?"
-  );
-}
+
 const routes = [
   {
     path: "/i-cursos",
@@ -53,3 +49,9 @@ setTimeout(() => {
     if (contador >= 100) clearInterval(interval);
   }, 200);
 });
+
+if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
+  throw new Error(
+    "Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?"
+  );
+}
