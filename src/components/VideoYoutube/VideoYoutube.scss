@@ -1,0 +1,102 @@
+.containerVideo {
+    position: relative;
+    width: fit-content;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    /* min-width: 100vw; */
+  }
+
+  #top {
+    background: #ff00004d;
+    // background: transparent;
+
+    width: 100%;
+    height: 4rem;
+    // height: 100% !important;
+    position: absolute;
+    z-index: 10;
+  }
+  #bottom {
+    background: #ff00004d;
+    // background: transparent;
+
+    width: 18%;
+    height: 2rem;
+    height: 10%;
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    bottom: 0px;
+  }
+
+  #player {
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    height: 100%;
+  }
+  #play{
+    position: absolute;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  }
+  #pause{
+    position: absolute;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  }
+  .progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #76c7c0 !important;
+    transition: width 0.5s ease !important;
+  }
+  @media screen and (min-width:1440px){
+    #top{
+        height: 90% !important;
+    }
+  }
+  @media screen and (min-width:1024px){
+    #top{
+        height: 88%;
+    }
+  }
+  @media screen and (min-width:768px){
+    #top{
+        height: 87%;
+    }
+  }
+  @media screen and (max-width:768px){
+    #top{
+        height: 86%;
+    }
+  }
+  @media screen and (max-width:425px){
+    #top{
+        height: 75%;
+    }
+  }
+  @media screen and (max-width:375px){
+    #top{
+        height: 73%;
+    }
+  }
+  @media screen and (max-width:320px){
+    #top{
+        height: 69% ;
+    }
+  }

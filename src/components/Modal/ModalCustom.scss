@@ -1,0 +1,107 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+// @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+.isDetail{
+    position: relative !important;
+    background-color: rgba(24,24,24,1) !important;
+    padding: 0;
+    > i{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size:xx-large;
+        cursor: pointer;
+        padding-top: 1rem;
+        padding-right: 1rem;
+    }
+}
+section.detail__curso{
+    .aside__info{
+        padding:0 2rem;
+        padding-bottom: 1rem;
+        background: linear-gradient(transparent,#181818);
+        background: rgb(24,24,24);
+        background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 100%); 
+    }
+    img.img__logo{
+        width:50%;
+        margin-bottom:1rem;
+    }
+    .containerBtns{
+        // margin-bottom:1rem;
+        button{
+            font-size: medium;
+            padding-left: 2rem;
+            padding-right: 2.4rem;
+        }
+
+    }
+    .aside__content{
+        padding:2rem;
+        >p{
+            font-size: medium;
+            margin-bottom: 2rem;
+        }
+        .titles__content{
+            display:flex;
+            justify-content:space-between;
+            h3{
+                font-size:x-large;
+            }
+            h2{
+                font-size: medium;
+            }
+        }
+        h3.title__lecciones{
+            margin-top: 2rem;
+        }
+        .accordion{
+            .accordion-item{
+                background-color: #181818;
+                .accordion-button{
+                    gap: 1rem;
+                    background-color: #181818;
+                    color: #fff;
+                    font-size: medium;
+                    i{
+                        font-size:small;
+                    }
+                    &.collapsed{
+
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                    &:focus{
+                        border-color: #ffffff6e;
+                        box-shadow: 0 0 0 .25rem rgb(255 255 255 / 10%);
+                    }
+                    &::after{
+                        background-image: none;
+                        content: '👇';
+
+                    }
+                    &:not(.collapsed)::after{
+                        background-image: none;
+                        content: '👇';
+                    }
+                }
+                .accordion-body{
+                    video{
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                    }
+                    button{
+                        font-size: medium;
+                        padding-left: 2rem;
+                        padding-right: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-content{
+    border-radius: 6px;
+}

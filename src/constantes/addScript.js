@@ -108,7 +108,7 @@ export class AddScript {
             "sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN",
           crossorigin: "anonymous",
         },
-        active: true,
+        active: false,
         priority: false,
       },
       {
@@ -193,7 +193,7 @@ export class AddScript {
               }
     
             `,
-        active: true,
+        active: false,
         priority: false,
       },
       {
@@ -265,6 +265,58 @@ export class AddScript {
         //   crossorigin: "anonymous",
         },
         active: true,
+        priority: false,
+      },
+      // "https://www.youtube.com/iframe_api"
+      {
+        name: "youtube.com_iframe_api",
+        to: "head",
+        tag: "script",
+  
+        property: {
+          src:"https://www.youtube.com/iframe_api",
+          // innerHTML: `hljs.highlightAll();`,
+        //   integrity:
+        //     "sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni",
+        //   crossorigin: "anonymous",
+        },
+        // innerHTML: `hljs.highlightAll();`,
+        active: true,
+        priority: false,
+      },
+      // https://cdn.plyr.io/1.8.2/plyr.js
+      {
+        name: "plyr.js",
+        to: "body",
+        tag: "script",
+  
+        property: {
+          src:"https://cdn.plyr.io/1.8.2/plyr.js",
+          // innerHTML: `hljs.highlightAll();`,
+        //   integrity:
+        //     "sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni",
+        //   crossorigin: "anonymous",
+        },
+        // innerHTML: `hljs.highlightAll();`,
+        active: false,
+        priority: false,
+      },
+      // https://cdn.plyr.io/1.8.2/plyr.css
+      {
+        name: "plyr.css",
+        to: "head",
+        tag: "link",
+  
+        property: {
+          href:"https://cdn.plyr.io/1.8.2/plyr.css",
+          rel:"stylesheet",
+          // innerHTML: `hljs.highlightAll();`,
+        //   integrity:
+        //     "sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni",
+        //   crossorigin: "anonymous",
+        },
+        // innerHTML: `hljs.highlightAll();`,
+        active: false,
         priority: false,
       },
       {

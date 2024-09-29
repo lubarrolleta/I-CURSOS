@@ -16,8 +16,15 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.14.3",
+    "html-to-text": "^9.0.5",
+    "jwt-decode": "^4.0.0",
+    "marked": "^14.1.2",
+    "plyr": "^3.7.8",
+    "qs": "^6.13.0",
+    "sass": "^1.79.3",
     "solid-bootstrap": "^1.0.20",
     "solid-js": "^1.8.11",
-    "solid-styled-components": "^0.28.5"
+    "solid-styled-components": "^0.28.5",
+    "solid-toast": "^0.5.0"
   }
 }

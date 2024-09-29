@@ -5,6 +5,8 @@ import "./index.css";
 import App from "./App";
 import Layout from "./components/Layout/Layout";
 import Productos from "./components/Productos/Productos";
+import Google from "./routes/Google";
+import Learn from "./routes/Learn/Learn";
 
 const root = document.getElementById('app');
 // data-tag="[I-CURSOS]"
@@ -19,8 +21,26 @@ const routes = [
         path: ["/","/:afiliadoId"],
         component: Productos
       },
+      
     ],
+
+    
   },
+  {
+    path:"/",
+    component:App,
+    children: [
+      {
+        path: "/connect/google/redirect",
+        component:Google
+      },
+      {
+        path: "/learn/:nombreCurso/:idCurso",
+        component:Learn
+      }
+    ]
+  }
+  
   // {
   //   path: "/i-cursos/:afiliadoId",
   //   component: ()=>(<Layout/>),

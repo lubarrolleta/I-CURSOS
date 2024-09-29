@@ -1,0 +1,146 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+// @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+.containerMain__destacado{
+    // height:100vh;
+    min-height:100vh;
+    position:relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // justify-content: space-evenly;
+    // align-items: center;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: opacity(0.6);
+        z-index: 1;
+        background: #000;
+    }
+    .contentDestacado{
+        position: relative;
+        z-index: 2;
+        min-height: 70%;
+        height: 70vh;
+        .content_destacado{
+            width: 50%;
+            color: #fff;
+            font-size: 1.2vw;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 0.1vw;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:flex-start;
+            // width: 100%;
+            h2{
+                font-size: xxx-large;
+            }
+            p{
+                margin: 2rem 0;
+                font-size: large;
+            }
+        }
+        display: flex;
+        gap: 1rem;
+        .media_destacado{
+            width: 50%;
+            display: flex;
+            justify-content:end;
+            align-items:center;
+            video{
+                width: 80%;
+                aspect-ratio: 16/9;
+                // margin: 0 auto;
+                border-radius: .2vw;
+                box-shadow: #2121341a 0 1px 4px;
+
+            }
+        }
+        .containerBtns{
+            display: flex;
+            gap: 1rem;
+            button{
+                font-size: medium;
+                padding-left: 2rem;
+                padding-right: 2.4rem;
+            }
+        }
+    }
+    .btn-check:focus+.btn-primary, .btn-primary:focus{
+        background-color: #fff !important;
+         border: none !important;
+        color: #000 !important;
+    }
+    hr.linea{
+        // display: none;
+    }
+}
+.btn-secondary{
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+    border-color: rgba(109, 109, 110, 0.7);
+    &:hover{
+        background-color: rgba(109, 109, 110, 0.4);
+        border-color: rgba(109, 109, 110, 0.4);
+    }
+    &:focus{
+        background-color: rgba(109, 109, 110, 0.4);
+        box-shadow: 0 0 0 .25rem rgba(130, 138, 145, 0);
+        border-color: rgba(109, 109, 110, 0.4);
+    }
+    &:not(.btn-check) + .btn:active{
+        background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+    border-color: rgba(109, 109, 110, 0.7);
+    }
+}
+.btn:first-child:active, :not(.btn-check) + .btn:active, .btn:focus-visible{
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+    border-color: rgba(109, 109, 110, 0.7);
+}
+.btn:focus-visible{
+    border: none !important;
+}
+@media screen and (max-width: 425px) {
+    .app{
+        margin-top: -9px !important;
+    }
+    .contentDestacado{
+        flex-direction: column;
+        padding-top: 60px;
+        height: auto !important;
+        h2{
+            text-align: center;
+        }
+        .containerBtns{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    .content_destacado{
+        width: 100% !important;
+    }
+    .media_destacado{
+        margin: 2rem 0;
+        width: 100% !important;
+        video{
+            width: 100% !important;
+        }
+    }
+    .cursos__{
+        h3{
+            font-size: large;
+        }
+    }
+    hr.linea{
+        display: block !important;
+        background-color:transparent !important;
+        height: 4rem;
+    }
+}
